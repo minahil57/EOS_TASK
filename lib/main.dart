@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _convertTo3D() async {
     if (_image != null) {
-      final uri = Uri.parse('http://192.168.130.190:5000/convert_to_3d');
+      final uri = Uri.parse('http://192.168.250.82:5000/convert_to_3d');
       final request = http.MultipartRequest('POST', uri)
         ..files.add(
           await http.MultipartFile.fromPath('image', _image!.path),
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ElevatedButton(
               onPressed: _pickImage,
-              child: Text('Pick an Image'),
+              child: Text('Capture'),
             ),
             ElevatedButton(
               onPressed: _convertTo3D,
